@@ -1,9 +1,9 @@
-import logo from '@/assets/logo.svg';
-import Header from '@/blocks/Header';
-import Footer from '@/blocks/Footer';
-import * as React from 'react';
 import config from '@/app.config.json';
+import logo from '@/assets/logo.svg';
+import Footer from '@/blocks/Footer';
+import Header from '@/blocks/Header';
 import { cn } from '@bem-react/classname';
+import * as React from 'react';
 
 const AppCn = cn('App');
 

@@ -22,7 +22,11 @@ const Header: React.SFC<HeaderProps> = (props) => {
       <nav role='navigation' className={HeaderCn('navigation')}>
         <ul className={HeaderCn('list')}>{
           props.items && props.items.map((i) => {
-            return <li className={HeaderCn('item')}><a className={HeaderCn('link')} href={i.href || '#'}>{i.title}</a></li>;
+            return <li className={HeaderCn('item')}>
+              <a className={HeaderCn('link')} href={i.href || '#'}>
+                {i.title}
+              </a>
+            </li>;
           })
         }</ul>
       </nav>
