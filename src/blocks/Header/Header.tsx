@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { cn } from '@bem-react/classname';
 import NavButton from '@/blocks/NavButton';
+import { cn } from '@bem-react/classname';
+import * as React from 'react';
 
 const HeaderCn = cn('Header');
 
@@ -11,22 +11,22 @@ export interface HeaderProps {
     href?: string,
   }>;
 }
- 
-export interface HeaderState {
-  navIsOpen: boolean
-}
- 
-class Header extends React.Component<HeaderProps, HeaderState> {
-  state = { navIsOpen: false  }
 
-  toggleNav = () => {
+export interface HeaderState {
+  navIsOpen: boolean;
+}
+
+class Header extends React.Component<HeaderProps, HeaderState> {
+  public state = { navIsOpen: false  };
+
+  public toggleNav = () => {
     this.setState({
       ...this.state,
-      navIsOpen: !this.state.navIsOpen
+      navIsOpen: !this.state.navIsOpen,
     });
   }
 
-  render() { 
+  public render() {
     return (
       <header className={HeaderCn()}>
         <div className={HeaderCn('logo')}
@@ -52,5 +52,5 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     );
   }
 }
- 
+
 export default Header;
