@@ -15,8 +15,8 @@ const Footer: React.SFC<FooterProps> = (props) => {
   return (
     <footer className={FooterCn()}>
       {
-        props.items && props.items.map((i) => (
-          <span className={FooterCn('item')}>
+        props.items && props.items.map((i, ii) => (
+          <span key={ii} className={FooterCn('item')}>
             <a href={i.href} className={FooterCn('link')}>{ i.title }</a>
           </span>
         ))
