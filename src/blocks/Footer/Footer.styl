@@ -1,0 +1,36 @@
+.Footer
+  display flex
+  flex-wrap wrap
+  box-sizing border-box
+  border-top 1px solid #f0f0f0
+  align-content center
+  align-items center
+  background-color white
+  padding 20px
+  padding-left 40px
+  padding-right 40px
+  font-size 12px
+  white-space nowrap
+  color #858585
+  max-width 100vw
+  @media (max-width 800px)
+    border-top none
+    justify-content center
+    padding-left 20px
+    padding-right 20px
+  &-item
+    margin-right 20px
+    &:last-child
+      margin-right 0
+    @media (max-width 800px)
+      line-height 1.5em
+  &-link
+    text-decoration none
+    color inherit
+  &-copyright
+    text-align right
+    margin-left auto
+    @media (max-width 800px)
+      margin-left inherit
+      text-align inherit
+      line-height 1.5em

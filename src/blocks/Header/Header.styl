@@ -1,0 +1,44 @@
+.Header
+  position fixed
+  box-sizing border-box
+  display flex
+  width 100%
+  height 90px
+  border-bottom 1px solid #f0f0f0
+  padding-left 40px
+  padding-right 40px
+  z-index 2
+  background-color white
+  &-logo
+    background-repeat no-repeat
+    background-size contain
+    background-position center
+    height 100%
+    width 110px
+  &-navigation
+    height 100%
+    width auto
+  &-list
+    list-style none
+    display flex
+    height 100%
+    margin 0
+    padding 0
+    margin-left 20px
+  &-item
+    height 100%
+    display flex
+    align-items center
+    margin-right 28px
+    &:last-child
+      margin-right 0
+  &-link
+    height 100%
+    display flex
+    align-items center
+    text-decoration none
+    font-weight bold
+    color #858585
+    &_state
+      &_active
+        color #333333
