@@ -1,0 +1,123 @@
+.EventCard
+  display grid
+  grid-template-columns 100%
+  grid-template-rows min-content 1fr
+  align-content space-between
+  background-color #fafafa
+  transition all .2s
+  cursor pointer
+  position relative
+  &:hover
+    background #f3f3f3
+    box-shadow 0 2px 6px 0 rgba(0, 0, 0, 0.3)
+  &_type_critical
+    background-color #db5341
+    color white
+    &:hover
+      background-color #b74738
+  &-next, &-close
+    position absolute
+    height 14px
+    width 14px
+    background-size contain
+    background-repeat no-repeat
+    transition all .2s
+    opacity 0
+    .EventCard:hover &
+      opacity 1
+  &-next
+    bottom 15px
+    right 15px
+    background-image url('~@/assets/icons/next.svg')
+  &-close
+    top 15px
+    right 15px
+    background-image url('~@/assets/icons/cross.svg')
+  &-heading
+    width 100%
+    box-sizing border-box
+    padding 20px
+    height auto
+    display grid
+    grid-template-columns 68px repeat(6, 1fr)
+    grid-template-rows 68px min-content min-content
+    justify-content space-between
+    align-items center
+    padding-bottom 0
+  &-title
+    grid-column span 6
+    font-size 24px
+    padding 0
+    margin 0
+    @media (max-width 715px)
+      font-size 14px
+  &-source
+    grid-column 1 / span 5
+    padding-top 10px
+    padding-bottom 10px
+    font-size 16px
+    @media (max-width 715px)
+      font-size 12px
+    .EventCard_size_s &
+      grid-column 1 / span 7
+  &-time
+    grid-column 6 / span 2
+    text-align right
+    padding-bottom 10px
+    padding-top 10px
+    font-size 16px
+    @media (max-width 715px)
+      font-size 12px
+    .EventCard_size_s &
+      grid-column 1 / span 7
+      text-align left
+  &-data
+    grid-row span 1
+    display grid
+    border-radius 20px
+    grid-template-columns 100%
+    grid-template-rows min-content min-content
+    align-content space-between
+    padding-left 20px
+    padding-right 20px
+    padding-bottom 10px
+    color #333
+    .EventCard_type_critical &
+      background-color #fafafa
+  &-description
+    grid-column 1 / span 7
+    font-size 24px
+    padding-top 10px
+    padding-bottom 12px
+    @media (max-width 715px)
+      font-size 18px
+    .EventCard_type_critical &
+      padding-top 20px
+  &-img
+    max-width 100%
+    width 100%
+    border-radius 20px
+  &-imgContainer
+    padding-top 20px
+    @media (max-width 715px)
+      font-size 12px
+  &-climate
+    font-size 18px
+  &-climateItem
+    margin-right 10%
+  &-buttons
+    font-size 20px
+    font-weight 600
+  &-button
+    height 54px
+    width 132px
+    border-radius 8px
+    background-color #ffd93e
+    border none
+    cursor pointer
+    &:last-child
+      margin-left 18px
+      background-color #e5e5e5
+    @media (max-width 355px)
+      height 63px
+      width 126px
